@@ -8,21 +8,21 @@ struct ficha{
 	float nota3;
 	float estado;
 };
-ficha alumno[10];
+ficha alumno[10]; 
 int main(){
-int opcion,i,posicion;
-while(true){
+int opcion,i,posicion; 
+while(true){ //secuencia repetitiva infinita
 for(i=0;i<=9;i++){
-	if(alumno[i].nombre==""){
+	if(alumno[i].nombre==""){  //alumno[i] guarda espacio vacante en variable posicion
 		posicion=i;
 	break;
 	}
 }
 cout<<"\nNOTA ESTUDIANTE"<<endl<<"  1. Mostrar alumnos"<<endl<<"  2. Ingresar alumno"<<endl<<"Opcion: ";
-cin>>opcion;
+cin>>opcion; //diguita opcion de menu
 switch(opcion){
 	case 1:
-		for(i=0;i<posicion;i++){
+		for(i=0;i<posicion;i++){ 
 			cout<<"Nombre: "<<alumno[i].nombre<<endl;
 			cout<<"RUT: "<<alumno[i].rut<<endl;
 			cout<<"Notas: "<<alumno[i].nota1 <<" // "<<alumno[i].nota2 <<" // "<<alumno[i].nota3 <<endl; 
